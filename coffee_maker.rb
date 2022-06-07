@@ -32,7 +32,6 @@ class CoffeeMaker
 
       puts "show capicity of current ingridients, enter pass\nI just want new coffee, push 8\nI don`t want sleep, push 9"
       show_capicity(gets.chomp)
-      break(puts 'if u don`t want sleep, You are welcome enjoy our coffee again') if '9'
     end
   end
 
@@ -41,7 +40,7 @@ class CoffeeMaker
   def make_americano
     self.water -= 50
     self.coffee -= 5
-    puts "Enjoy your Americano\n"
+    puts "Enjoy your Americano\n\n"
   end
 
   def make_latte
@@ -56,7 +55,7 @@ class CoffeeMaker
     self.coffee -= 5
     self.sugar -= 5
     self.milk -= 5
-    puts "Enjoy your Latte\n"
+    puts "Enjoy your Latte\n\n"
   end
 
   def enoght_ingridients?
@@ -66,7 +65,10 @@ class CoffeeMaker
   def show_capicity(admin)
     case admin
     when 'coffee'
-      puts "\nwater: #{water}, coffee: #{coffee}, sugar: #{sugar}, milk: #{milk}\n"
+      puts "\nwater: #{water}, coffee: #{coffee}, sugar: #{sugar}, milk: #{milk}\n\n\n"
+    when '9'
+      puts "if u don`t want sleep, You are welcome enjoy our coffee again\n\n\n"
+      exit
     end
   end
 end

@@ -42,7 +42,8 @@ class CoffeeMaker
     self.water -= 50
     self.coffee -= 5
     self.bank += 5
-    puts "Enjoy your Americano\n\n"
+    sleep(1)
+    puts "Enjoy your Americano ;)\n\n"
   end
 
   def make_cappuccino
@@ -51,15 +52,18 @@ class CoffeeMaker
     self.sugar -= 5
     self.milk -= 5
     self.bank += 10
-    puts "Enjoy your Latte\n\n"
+    sleep(5)
+    puts "Enjoy your Latte :)\n\n"
   end
 
   def make_latte
     self.water -= 50
     self.coffee -= 5
     self.sugar -= 5
+    self.milk -= 5
     self.bank += 7
-    puts "Enjoy your Cappuccino\n\n"
+    sleep(3)
+    puts "Enjoy your Cappuccino :0\n\n"
   end
 
   def enoght_ingridients?
